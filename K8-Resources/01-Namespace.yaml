@@ -1,0 +1,5 @@
+# Name space is the logical isolation of group of resources within a single cluster
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: Roboshop
