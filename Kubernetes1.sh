@@ -76,4 +76,10 @@ Kubernetes NameSpaces:
     Isolated Project Spaces 
     In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster.
     Names of resources need to be unique within a namespace, but not across namespaces. 
-    Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services, etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc)
+    Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services,Pods etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc)
+
+Commans for Name Spaces:
+    kubectl get pods 
+    kubectl create -f <namespace-file-name> --> When resource not exists this will create the namespcace
+    kubectl apply -f <namespace-file-name> --> When resources not exists this will create the resource and if exists it will update the resource
+    kubectl 
