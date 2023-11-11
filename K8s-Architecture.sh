@@ -42,3 +42,9 @@ Controller Manager:
 Cloud Controller Manager:
     Controls Cloud Services realted to kubernetes
     ELS and AKS 
+
+Kubernetes Monitoring With Prometheus Graphana :
+    Why You need Monitoring?
+    What is Prometheus and Graphana?
+Why Aspect?
+    

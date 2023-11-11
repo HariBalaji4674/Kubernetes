@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: POd
+metadata:
+  name: image-pull
+  namespace: roboshop
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+    - name: demo
+      value: " Hello Greet Something new"
+    - name: demo2
+      value: "hello mr devdas newtool"

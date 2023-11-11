@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Annotations-File
+  namespace: roboshop
+  labels:
+    environment: dev
+    app: nginx
+  annotations:
+    imageregistry: "www.httpseerveices.com"
+    environment: dev
+    app: nginx
+spec:
+  containers:
+  - name: nginx-installation
+    image: nginx
+    ports:
+    - conatinerPort: 80
+    

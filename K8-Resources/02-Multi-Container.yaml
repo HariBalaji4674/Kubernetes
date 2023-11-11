@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Multi-Container
+  namespace: roboshop
+spec:
+  containers:
+  - name: nginx-conatainer-1
+    image: nginx
+  - name: almalinux-conatiner-2
+    image: almalinux
+    command: ["sleep","300"] # By default almalinux will not start the server we ned to explicitly start hencee given the command 
