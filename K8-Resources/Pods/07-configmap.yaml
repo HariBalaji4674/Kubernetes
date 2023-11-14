@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: config-map
 data:
-  name: Peddireddy
-  course: DevOps
-  year: 2023
-  
+  name: "Peddireddy"
+  course: "DevOps"
+  year: "2023"
