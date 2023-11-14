@@ -28,6 +28,9 @@ kubectl exec -it <pod-name> -c <second-container-name> -- bash
 
 To watch Kubectl pods command is: --> watch kubectl pods
 
+To get IP Address for pod --> kubectl get pods -o wide
+
+
 
 
 
