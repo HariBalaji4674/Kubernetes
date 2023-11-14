@@ -23,7 +23,7 @@ spec:
         project: roboshop
         environment: practice
     spec:
-      container:
+      containers:
       - name: catalogue
         image: hari9397/catalogue:1.0.0
         envFrom:
