@@ -19,8 +19,8 @@ Kubernetes Session -- 57
     20:00       -- Multi-Pod Specification
     25:00       -- Labels
     30:00       -- Annotation
-    40:00       -- Resources Explation Limits and Requests
-    49:00       -- Image pull policy 
+    36:00       -- Resources Explation Limits and Requests
+    46:00       -- Image pull policy 
     51:00       -- Kubernetes Environments
     54:00       -- Config-Map
     01:00:00    -- Config Direct Mapping

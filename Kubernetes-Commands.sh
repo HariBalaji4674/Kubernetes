@@ -8,10 +8,13 @@ kubectl get pods -A --> List down all the pods even closed
 To Go Inside the Pod :
   kubectl exec -it <pod-name> -n <namespace name> -- bash
   curl localhost --> to check the file 
-  
+
 To delete the resouces :
   kubectl delete <podname> -n <namespace name>
 
+TO decribe the pods :
+  kubectl decribe pod <pod-name>
+  
 
 
 Load Balancers 
