@@ -26,6 +26,8 @@ After Deploying the MultiContainer pod To access the multi-containers the comman
 
 kubectl exec -it <pod-name> -c <second-container-name> -- bash
 
+To watch Kubectl pods command is: --> watch kubectl pods
+
 
 
 
