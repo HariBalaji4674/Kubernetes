@@ -6,6 +6,7 @@ kubectl get pods --> List the running pods
 kubectl get pods -A --> List down all the pods even closed
 
 To Go Inside the Pod :
+  kubectl exec -it <pod-name> -- bash
   kubectl exec -it <pod-name> -n <namespace name> -- bash
   curl localhost --> to check the file 
 
@@ -17,14 +18,25 @@ TO decribe the pods :
 
 To describe the config map 
   kubectl describe  <pod-name> configmap <config-map-name> 
-  
+
+To Get the service
+  kubectl get service
+
+After Deploying the MultiContainer pod To access the multi-containers the command used 
+
+kubectl exec -it <pod-name> -c <second-container-name> -- bash
 
 
 
-Load Balancers 
-Types of load Balancers
+
+
+Load Balancers : --> Types of load Balancers
+  Application Load Balancers
+  Proxy Network Load Balancers
+  Passthrough network load balancers
+
+
 #Object InKubernetes:
-
 Pod
 Service
 ReplicationController
