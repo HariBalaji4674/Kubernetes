@@ -60,4 +60,8 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 VALIDATE $? "Kubectl Installation Is Successfull"
 
+sudo yum install git -y 
+
+VALIDATE $? "Git Installation is Successfull"
+
 echo -e "$R Please logout and login again $N"

@@ -29,6 +29,14 @@ vim config
 
 EveryThing In Kubernetes is resources 
 
+Create a Resource with in the Workstation.
+
+1) NameSpaces: Create and Apply 
+    Namespace is the logical isolation between the resources to resources and the host system 
+    Logical Isolation of memory,network,filesystem,security etc...
+    
+    Create --> it will create the namespace and if already exits it will through an error
+    Apply --> It will create the namespace and if already exits it will update the resource
 
 
 
