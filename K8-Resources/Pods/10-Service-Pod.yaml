@@ -17,7 +17,7 @@ spec:
       name: http-web-svc
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: nginx-service
 spec:
