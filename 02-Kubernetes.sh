@@ -58,14 +58,18 @@ Annotations:
     Annotations can use special characters inside keys and values
 
 Resources:
-    
-    
+    Requests --> Soft Set
+    Limits --> Hard Set 
+
+Config-Map --> The secrets stored as key value pair.
+
+
 Image Pull Policy:
     The imagePullPolicy for a container and the tag of the image affect when the kubelet attempts to pull (download) the specified image.
 
 Resources Management:
     resources --> Like CPU,Memory,etc..
-    Requests -->
-    Limits -->
+    Requests --> CPU,Memory
+    Limits --> Memory
     
 
