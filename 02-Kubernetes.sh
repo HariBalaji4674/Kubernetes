@@ -1,3 +1,37 @@
+In Master/Cluster.
+------------------
+
+After Successfull Minikube Installation of Check the Files are there or not 
+ls -l --> kubeconfig ,kubeconfig_ip will be there 
+then create one .kube directory --> mkdir .kube
+then copy kubeconfig as config to .kube directory
+
+Commands : after minikube install
+    ls -l
+    mkdir .kube
+    cp kubeconfig .kube/config (Configuration about Control Node/ Cluster/ Master)
+    kubectl get nodes --> List Down the Nodes (Control Nodes)
+
+In Worker Node(WorkStation)
+-----------------------------
+
+Checking The log files for Installation :
+    tail -f /var/log/cloud-init-output.log 
+
+Install Kubectl in Worker Node
+Create .kube --> mkdir .kube
+then add authentication to the .kube config file 
+
+mkdir .kube
+cd .kube
+vim config
+
+
+EveryThing In Kubernetes is resources 
+
+
+
+
 Labels : 
     Labels are key-Value pairs that are attached to pods 
     No Special Characters should be used
