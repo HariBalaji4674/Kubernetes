@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: config-direct
+spec:
+  containers:
+  - name: Nginx-Install
+    image: nginx
+    envFrom:
+    - configMapRef:
+        name: config-map
