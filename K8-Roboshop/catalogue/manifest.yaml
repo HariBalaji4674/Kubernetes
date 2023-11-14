@@ -33,13 +33,17 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: catalogue
+  namespace: roboshop
+spec:
   selector:
     app: catalogue
     tier: app
     project: roboshop
     environment: practice
   ports:
-  - name: catalogue
+  - name: mongodb-port
+    protocol: TCP
     port: 8080 # This port is related to service port
     targetPort: 8080 # This is related to Conatiner port
 ---
