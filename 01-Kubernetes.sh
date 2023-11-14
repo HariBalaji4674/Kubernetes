@@ -95,12 +95,6 @@ Kubernetes NameSpaces:
     Names of resources need to be unique within a namespace, but not across namespaces. 
     Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services,Pods etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc)
 
-Commans for NameSpaces:
-    kubectl get pods 
-    kubectl create -f <namespace-file-name> --> When resource not exists this will create the namespcace
-    kubectl apply -f <namespace-file-name> --> When resources not exists this will create the resource and if exists it will update the resource
-    kubectl get namespaces
-
 Kubernetes Pods:
 What is Pods?
     A Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
