@@ -24,7 +24,7 @@ Kubernetes Session -- 57
     51:00       -- Kubernetes Environments
     54:00       -- Config-Map
     01:00:00    -- Config Direct Mapping
-    01:10:00    -- Services In Kubernetes
+    01:13:00    -- Services In Kubernetes
 
 Kubernetes Session -- 58 
     03:00       -- eksctl Installation

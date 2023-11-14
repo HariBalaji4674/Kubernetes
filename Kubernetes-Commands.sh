@@ -14,7 +14,11 @@ To delete the resouces :
 
 TO decribe the pods :
   kubectl decribe pod <pod-name>
+
+To describe the config map 
+  kubectl describe  <pod-name> configmap <config-map-name> 
   
+
 
 
 Load Balancers 

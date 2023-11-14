@@ -22,3 +22,9 @@ spec:
         configMapKeyRef:
           name: config-map
           key: year
+env:
+- name: 
+  valueFrom:
+    configMapKeyRef:
+      name: config-map
+      key: course
