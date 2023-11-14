@@ -23,7 +23,7 @@ spec:
           name: config-map
           key: year
 env:
-- name: 
+- name: config maps
   valueFrom:
     configMapKeyRef:
       name: config-map

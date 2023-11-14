@@ -20,7 +20,6 @@ Container will die if it does not support the building the image
 Container will have only one host divided the resouces into multiple
 Containers are getting effected due to lack of resource allocation between containers
 
-
 Lets take some one has killed container then to application inside will not work so we need the feature called AutoHealing Capacity 
 
 Lets take we are using the application at festival times or occasion time everyone will use that for offers at that time fixed container will not support that much traffic so we need auto scaling which docker does not support 
@@ -35,7 +34,7 @@ Disadvantages of Docker:
     AutoScaling Doesnot support
     it is single host
     Enterprise Support does not support
-    Docker server is Crashed 
+    Docker server is Crashed not able to access the application
     More Traffic Does not support
     Balancing Load Does Not Support
     What about Configs and secrets Management 
@@ -45,11 +44,13 @@ Kubernetes : Container Orchestration Platform
     Kubernetes supports AutoHealing --> Auto restart,reboot.etc..
     Single Host issue will Solve
     Enterprise level Standards
+    Stores Config as 64d format
 
 Single Host --> 
-    By Default Kubernets is a Cluster 
-    Cluster is Group of nodes Master and Slave Node 
-    if the container is getting effected by another container kuberntes wll move that effected container in another node
+    By Default Kubernetes is a Cluster 
+    Cluster is Group of nodes 
+    Master and Slave Model 
+    if the container is getting effected by another container kubernetes will move that effected container to another node so that application cannot get effected due to this.
 
 AutoScaling -->
     Replication Controller/Replicaset

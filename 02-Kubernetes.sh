@@ -63,6 +63,7 @@ Resources:
 
 Config-Map --> The secrets stored as key value pair.
 
+Secrets --> The Storing of username and password
 
 Image Pull Policy:
     The imagePullPolicy for a container and the tag of the image affect when the kubelet attempts to pull (download) the specified image.
@@ -86,6 +87,6 @@ ClusterIP:
     To Expose your application to world 
     Service Mesh --> The IP Address for the cluster IP is changed everytime but the name of the clusterip will not change that name is called Service Mesh.
     To Balance the load --> Deployment and ReplicaSet
-    
-    
+
+NodePort:
 
