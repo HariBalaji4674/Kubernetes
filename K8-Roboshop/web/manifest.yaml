@@ -160,6 +160,8 @@ metadata:
   namespace: roboshop
 spec:
   type: LoadBalancer
+  externalIPs:
+  - 10.1.0.10
   selector:
     app: mongodb
     tier: db
