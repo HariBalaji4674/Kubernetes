@@ -137,6 +137,25 @@ https://kodekloud.com/blog/kubernetes-objects/#11-types-of-objects-in-kubernetes
     9. ConfigMaps
     10. Secrets
     11. Job
+Storage System/Services in Kubernetes:
+    Every pod has some storage to store in the container space but it will not save the logs/data for long time 
+    When the Pod/Container is died then the logs/data will be lost so to save the data we need the storage system
+    There are Different Storage system for Containers:
+        1) EBS --> Elastic Block Storage
+        2) EFS/NFS --> Elastic File System/System Service
+There are 4 Types of Storage system for container :
+    1) emptyDir
+    2) Hostpath
+    3) Static Provision
+    4) Dynamic Provisioning
+
+FileBeat: 
+    FileBeat is the Lightweight Shipper for forwarding and centralizing the log data.
+    Installed as Agent in Servers 
+    Monitors for log files or locations where you specify collects the logs and events created by the applications
+    Then it will Forward to Elastic Search or Logstash for Indexing
+    
+
 
 
 

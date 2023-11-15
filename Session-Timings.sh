@@ -36,5 +36,6 @@ Kubernetes Session -- 58
     01:02:00    -- Roboshop K8 Building.
     
 Kubernetes Session -- 59,60 --> Total Roboshop Building 
-    
 
+Kubernetes Session -- 61:
+    00:00 -- Storage -->
