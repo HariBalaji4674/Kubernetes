@@ -194,6 +194,8 @@ Labels :
     Labels are key value pairs with some functionalities and helps to filtering the pod
     Labels are attached that intended to do specify identifying the attributes that are relevenat to user and objects
     That does not directly imply semantics to the core system of pods
+    labels are used in selectors that will hel to filter some functionalities
+    
 
 Annotations:
     Annotations are attached to the pods as arbitrary non identifying objects 
