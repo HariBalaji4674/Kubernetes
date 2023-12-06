@@ -168,12 +168,21 @@ Pods:
     Pod is a smallest deployable file in kubernetes
     pod can contain different specification about containers
     pod can conatin multiple conatiners with sharing network,memory,and security
-    
+
 Commands for NameSpaces:
     kubectl get pods 
     kubectl create -f <namespace-file-name> --> When resource not exists this will create the namespcace
     kubectl apply -f <namespace-file-name> --> When resources not exists this will create the resource and if exists it will update the resource
     kubectl get namespaces
+SideCar Containers:
+    Multiple Containers are used to share the same network and storage.
+    These Multiple containers are called as sidecar containers
+    1: Side Car
+    2: Proxy Patterns
+    3: init containers
+These side car containers can access main container log files etc.. and share it with elastic log search and kibana.
+Filebeat is the side car container name where it will push all the log files to elk
+
 
 Labels : 
     Labels are key-Value pairs that are attached to pods 
