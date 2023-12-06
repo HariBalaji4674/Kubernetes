@@ -16,11 +16,12 @@ To delete the resouces :
 TO decribe the pods :
   kubectl decribe pod <pod-name>
 
-To describe the config map 
+To describe the config map: 
   kubectl describe  <pod-name> configmap <config-map-name> 
 
-To Get the service
+To Get the service:
   kubectl get service
+  kubectl get svc
 
 After Deploying the MultiContainer pod To access the multi-containers the command used 
 
@@ -30,10 +31,8 @@ To watch Kubectl pods command is: --> watch kubectl pods
 
 To get IP Address for pod --> kubectl get pods -o wide
 
-
-
-
-
+kubectl get sc : get details about storage class
+kubectl get pv,pvc : Persisitent volume ,Persisitent Volume Claim
 
 Load Balancers : --> Types of load Balancers
   Application Load Balancers
@@ -41,7 +40,7 @@ Load Balancers : --> Types of load Balancers
   Passthrough network load balancers
 
 
-#Object InKubernetes:
+#Objects InKubernetes:
 Pod
 Service
 ReplicationController
@@ -55,3 +54,4 @@ kind: Objects Above Listed
 metadata:
   name: give the object name
   
+kubectl edit service <service-name> 

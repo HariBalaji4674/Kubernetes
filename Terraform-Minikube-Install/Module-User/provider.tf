@@ -1,19 +1,17 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
-      version = "5.24.0"
+        source = "hashicorp/aws"
+        version = "5.26.0"
     }
   }
   backend "s3" {
-    bucket = "hariroboshop"
-    region = "us-east-1"
-    dynamodb_table = "roboshoptable"
-    key = "minikube"
+        bucket = "roboshophari"
+        key    = "minikube"
+        region = "us-east-1"
+        dynamodb_table = "haritable"
   }
 }
-
 provider "aws" {
-  # Configuration options
-  region = "us-east-1"
+    region = "us-east-1"  
 }

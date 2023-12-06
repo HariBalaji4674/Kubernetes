@@ -49,7 +49,6 @@ Commands for NameSpaces:
     kubectl apply -f <namespace-file-name> --> When resources not exists this will create the resource and if exists it will update the resource
     kubectl get namespaces
 
-
 Labels : 
     Labels are key-Value pairs that are attached to pods 
     No Special Characters should be used
@@ -154,7 +153,73 @@ FileBeat:
     Installed as Agent in Servers 
     Monitors for log files or locations where you specify collects the logs and events created by the applications
     Then it will Forward to Elastic Search or Logstash for Indexing
+
+StateFull Set :
+    Statefull Set will follow orderly to create the pods/conatainers
+    Statefull set will create the db related applications
+    Network identity is important .Statefulset will preserve network identluy
+
+Headless service for stateful set 
+why headless service for statefull set:
+    1. Deployment and Attach to the service
+    Round Robbin Algorithim is used in load balancer to send the request
+    2. In statefull set we need to explicity mention clusterip is none
     
+
+Storage class used for Dynamic Provisioning
+Pv --> Representation of external storage
+PVC --> A claim thatcan make to mount the volume
+
+StateFul Set and Deployment:
+Statefulset is for DB related components, StatefulSet will use Headless service
+Deployment is for Stateless applications
+
+EBS --> Elastic Block Storage
+EFS --> Elastic File System
+for DB we have to use EBS beacuse the Latency will be low with EBS as ebs will be attached to next to the container as it is attached directly it will be stored directly and retrieve back immediatly as it is saved in same region
+
+Steps tp Create/Develop StatefullSet Manifest Files:
+    1. Install CSI Drivers
+    2. Give Access to EC2 Servers
+    3. Creation of Storage Class
+
+1. Create a Storage Class
+# 2. Create Persistent Volume 
+3. Create Persisistent Volume Claim Name as same as Storage Class Name
+4. Attach PVC as volumeMounts name as same as PVC Name 
+5. Create a manifest.yaml file 
+    Create first 
+
+mongodb --> 27017
+redis -- > 6379
+mySql -->3306
+rabbitMq --> 5672
+    
+1. Create Storage Class
+2. Create StatefulSet
+    1. Create kind: SatetfulSet
+    2. Spec: 
+3. Create Service
+4. Create ConfigMap
+
+
+Helm Charts:
+    In Containerization we are doing 2 things
+    1. Building image and pushing it to DockerHub
+    2. Making Manifest files to run the applications
+
+Manifest--> Input latest Version
+Purpose of Helm :
+    Parameterize the kubernetes manifest files
+    it is kubernetes package manager
+Parameterize Manifest Files:
+    Helm Charts:
+        apiVerison: Required
+        name: requiered --> Name of the chart
+        version: chart version --> Give the name of the chart version
+        description: a meaningful sentence
+        appVersion: this is application version
+        templates folder: were we keep our manifest files
 
 
 

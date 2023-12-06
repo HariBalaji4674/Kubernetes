@@ -1,0 +1,41 @@
+Helm Charts:
+    What ever changing constantly we need to create variables 
+Purpose of helm is 2 Things:
+    Parametetise the Kubernetes Manifest Files
+    Packages the kubernetes Manifest Files
+
+Installing Helm : 3 Commands:
+    Installed Helm 3 
+Structure of Helm:
+    *1) Charts --> Where all Chart related content stored.
+    *2) template--> Whee all manifest files stored
+     3) 
+
+Charts:
+    apiVersion: Version of 
+    name: Name od Charts
+    version: chart version
+    description: "This is helm chart of nginx"
+    api
+    appVersion: application version
+
+How to run the helm chats :
+  helm install <chart-name> --> To run the chart
+
+Parameterizing the image values:
+Create the values.yaml file :
+  add all the repeatedly chainging values like below
+  Variables: {{.values.deployment.imageVersion}}
+
+Helm History <chart-name> --> To Check The history for deployment
+helm list
+helm install nginx . (period same directory)
+helm upgrade <chart-name> .
+helm rollback <chart-name>
+helm histroy <chart-name>
+
+elastic search and prometheus :
+  1: image should be available
+  2: You should know how to create and run the manifest files
+
+Helm Public Charts: Artifactory Hub

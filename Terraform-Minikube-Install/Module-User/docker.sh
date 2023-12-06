@@ -5,6 +5,11 @@ N="\e[0m"
 Y="\e[33m"
 USERID=$(id -u)
 
+
+dUQWJ4LkqevfRDmr
+
+
+
 LOGSDIR=/tmp
 # /home/centos/shellscript-logs/script-name-date.log
 SCRIPT_NAME=$(basename "$0")

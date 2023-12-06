@@ -6,7 +6,7 @@ module "ec2_instance" {
   ami = "ami-03265a0778a880afb"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.allow_all.id]
-  subnet_id              = "subnet-0fe045518f51de8f5"
+  subnet_id              = "subnet-08779672161084a23"
   user_data = file("docker.sh")
 
   tags = {
