@@ -183,6 +183,9 @@ SideCar Containers:
 These side car containers can access main container log files etc.. and share it with elastic log search and kibana.
 Filebeat is the side car container name where it will push all the log files to elk
 
+kubectl exec -it <pod name>
+kubectl exec -it <pod-name> -c <container-name> -- bash
+to interact with the containers
 
 Labels : 
     Labels are key-Value pairs that are attached to pods 

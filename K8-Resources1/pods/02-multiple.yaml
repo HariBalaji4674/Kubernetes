@@ -11,3 +11,4 @@ spec:
     - containerPort: 80
   - name: nginx-support
     image: almalinux:8
+    command: ["sleep" "200"]
