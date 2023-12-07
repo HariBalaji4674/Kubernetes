@@ -5,7 +5,7 @@ metadata:
   labels:
     env: roboshop-deb
     app: frontend
-----
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
