@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: Config-direct
+  name: config-direct
 spec:
   containers:
   - name: config-pod-d
