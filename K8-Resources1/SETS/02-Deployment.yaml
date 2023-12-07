@@ -1,3 +1,11 @@
+apiVersion: v1
+kind: NameSpace
+metadata:
+  name: roboshop
+  labels:
+    env: roboshop-deb
+    app: frontend
+----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -26,4 +34,4 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-        
+
