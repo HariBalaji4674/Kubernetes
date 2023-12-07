@@ -125,6 +125,7 @@ Deployment vs Replicaset vs Pod vs Container
 
 Container --> Docker --> Light weight in nature for running the application with all application related packages and dependencies along with the minimum os usage is called Container.
 
+
 In Master/Cluster.
 ------------------
 
@@ -247,7 +248,7 @@ There are 3 Types of Services in Kubernetes :
 
 ClusterIP:
     The pod which is exposed to get the ipaddress for the pod is called ClusterIP
-    
+
     It is Exposed to only ClusterIP (Inside the kuberenetes by kubeproxy)
 
     To Expose your application to world 
