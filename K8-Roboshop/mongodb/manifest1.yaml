@@ -27,7 +27,7 @@ spec:
         image: joindevops/mongodb:1.0.0
 ---
 apiversion: v1
-kind: service
+kind: Service
 metadata:
   name: mongodb
   labels:
