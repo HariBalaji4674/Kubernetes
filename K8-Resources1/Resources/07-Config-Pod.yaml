@@ -3,11 +3,11 @@ kind: Pod
 metadata:
   name: config-pod
   labels:
-    Course: Devops
+    Course: "Devops"
     Year: "2023"
   annotattions:
-    course.com: Devops
-    year.com: 2023
+    course.com: "Devops"
+    year.com: "2023"
 spec:
   containers:
   - name: nginx
