@@ -1,7 +1,7 @@
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
-  name = "minikube-Workstation"
+  name = "WORKSTATION"
 
   ami = "ami-03265a0778a880afb"
   instance_type          = "t3.medium"

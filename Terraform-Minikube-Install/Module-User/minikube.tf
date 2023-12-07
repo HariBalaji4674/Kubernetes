@@ -2,7 +2,7 @@ module "minikube" {
   source = "github.com/scholzj/terraform-aws-minikube"
 
   aws_region    = "us-east-1"
-  cluster_name  = "Minikube1"
+  cluster_name  = "MINIKUBE"
   aws_instance_type = "t3.medium"
   ssh_public_key = "DevOps.pub"
   aws_subnet_id = "subnet-08779672161084a23"
