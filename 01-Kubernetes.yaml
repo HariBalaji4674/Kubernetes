@@ -232,6 +232,9 @@ Kubernetes Environment:
 Resources Management:
     resources --> Like CPU,RAM,Memory,etc..
 
+Config-Map:
+    
+
 Kubernetes Services:
     To access the pods from internet we need some kind of services that services
     Service is a method of exposing the application to the external world 
