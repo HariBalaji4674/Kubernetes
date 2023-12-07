@@ -10,7 +10,7 @@ spec:
   - name: nginx-pod
     image: nginx
     ports:
-    - conatinerPort: 82
+    - containerPort: 82
       name: my-port-web
 ---
 apiVersion: v1
