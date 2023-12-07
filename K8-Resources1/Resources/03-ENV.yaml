@@ -13,7 +13,7 @@
 #       value: "Hello from the environment"
 #     - name: DEMO_FAREWELL
 #       value: "Such a sweet sorrow"
-apiVersion: v1
+apiVersion: apps/v1
 kind: Pod
 metadata:
   name: envvar
