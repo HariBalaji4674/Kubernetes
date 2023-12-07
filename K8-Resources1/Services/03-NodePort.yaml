@@ -21,7 +21,7 @@ metadata:
   name: nodeport-service
 spec:
   type: NodePort
-  Selector:
+  selector:
     name: nodeport1
     service: node
     environment: production
