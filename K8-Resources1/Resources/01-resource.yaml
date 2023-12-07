@@ -11,10 +11,5 @@ spec:
         cpu: "100m"
         memory: "128mi"
       limits:
-        cpu: "200"
+        cpu: "200m"
         memory: "256mi"
-
-
-# kubectl apply -f <filename>
-#kubectl get pods
-# kubectl describe pods 
