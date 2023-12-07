@@ -5,7 +5,7 @@ metadata:
   labels:
     Course: "Devops"
     Year: "2023"
-  annotattions:
+  annotations:
     course.com: "Devops"
     year.com: "2023"
 spec:
