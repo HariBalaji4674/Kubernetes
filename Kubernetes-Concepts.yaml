@@ -258,6 +258,8 @@ ClusterIP:
     To Balance the load --> Deployment and ReplicaSet
 
 NodePort:
+    One Port number for all the Nodes and creates cluster ip which is connected with all three node ports
+    
     NodePort is the next level for ClusterIP
     In Node Port the cluster will connect with the nodes equally to each when the user hits the ip the ip will make to connect one node then that node request api call will go to the cluster ip where the port is connected
 
