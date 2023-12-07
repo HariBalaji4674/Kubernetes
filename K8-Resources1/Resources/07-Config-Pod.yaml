@@ -4,7 +4,7 @@ metadata:
   name: config-pod
   labels:
     Course: Devops
-    Year: 2023
+    Year: "2023"
   annotattions:
     course.com: Devops
     year.com: 2023
