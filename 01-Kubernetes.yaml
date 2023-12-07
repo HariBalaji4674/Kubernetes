@@ -232,11 +232,12 @@ Kubernetes Environment:
 Resources Management:
     resources --> Like CPU,RAM,Memory,etc..
 
-Config-Map:
-    
+Config-Map: To Set the configurations to teh kubernetes environment 
+
+Secrets: To store username and passwords securly in the environment variables
 
 Kubernetes Services:
-    To access the pods from internet we need some kind of services that services
+    To access the pods from internet we need some kind of services to expose
     Service is a method of exposing the application to the external world 
 
 There are 3 Types of Services in Kubernetes :
@@ -245,10 +246,14 @@ There are 3 Types of Services in Kubernetes :
     LoadBalancer --> Only For Cloud Related Containers
 
 ClusterIP:
-    The pod which is exposed to get the ipadress for the pod is called ClusterIP
-    It is Exposed to only ClusterIP
+    The pod which is exposed to get the ipaddress for the pod is called ClusterIP
+    
+    It is Exposed to only ClusterIP (Inside the kuberenetes by kubeproxy)
+
     To Expose your application to world 
+
     Service Mesh --> The IP Address for the cluster IP is changed everytime but the name of the clusterip will not change that name is called Service Mesh.
+
     To Balance the load --> Deployment and ReplicaSet
 
 NodePort:

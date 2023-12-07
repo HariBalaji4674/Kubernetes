@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cluster-ip-pod
+  labels:
+    app.kubernetes.io/name: proxy
+    environment: dev
+    app: frontend
+spec:
+  containers:
+  - name: nginx-pod
+    image: nginx
+    ports:
+    - containerPort: 80
+      name: http-web-svc
