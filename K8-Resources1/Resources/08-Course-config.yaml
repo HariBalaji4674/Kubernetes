@@ -7,5 +7,5 @@ spec:
   - name: config-pod-d
     image: nginx
     envFrom:
-    -configMapRef:
-      name: configmap
+    - configMapRef:
+        name: configmap
