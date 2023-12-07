@@ -25,6 +25,6 @@ spec:
     app: frontend
   ports:
   - name: service-port1
-    protocol: tcp
+    protocol: TCP
     port: 80
     taragetPort: http-web-svc
