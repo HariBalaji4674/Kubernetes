@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
-  namespace: roboshop
+  namespace: roboshop1
   labels:
     app: mongodb
     tier: db
@@ -31,7 +31,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb
-  namespace: roboshop
+  namespace: roboshop1
 spec:
   selector:
     app: mongodb
