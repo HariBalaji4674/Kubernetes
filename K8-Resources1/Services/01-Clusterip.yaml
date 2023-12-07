@@ -13,3 +13,18 @@ spec:
     ports:
     - containerPort: 80
       name: http-web-svc
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: service-conf
+spec:
+  selector:
+    app.kubernetes.io/name: proxy
+    environment: dev
+    app: frontend
+  ports:
+  - name: service-port1
+    protocol: tcp
+    port: 80
+    taragetPort: http-web-svc
