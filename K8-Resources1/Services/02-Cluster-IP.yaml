@@ -11,7 +11,7 @@ spec:
     image: nginx
     ports:
     - conatinerPort: 82
-      name: 83
+      name: my-port-web
 ---
 apiVersion: v1
 kind: Service
@@ -25,4 +25,4 @@ spec:
   - name: nginx
     protocol: TCP
     port: 82
-    targetPort: 83
+    targetPort: my-port-web
