@@ -46,6 +46,7 @@ How to Manage RBAC:
 
 aws sts get -caller identity
 eks update-kubeconfig  --> to Update 
+
   5) Cluster Role:
 
   6) Cluster Role Binding:
