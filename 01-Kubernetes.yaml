@@ -189,17 +189,31 @@ to interact with the containers
 
 Labels : 
     Labels are key-Value pairs that are attached to pods 
-    No Special Characters should be used
-    Key can have multiple but values should be unique
-    Labels are key value pairs with some functionalities and helps to filtering the pod
+
+    No Special Characters should be used as key values in labels
+
+    Keys can have multiple but values should be unique
+
+    Labels are key value pairs with some functionalities and helps to filtering the pod.
+
     Labels are attached that intended to do specify identifying the attributes that are relevenat to user and objects
+
     That does not directly imply semantics to the core system of pods
-    labels are used in selectors that will hel to filter some functionalities
-    
+
+    labels are used in selectors that will hel to filter some functionalities.
+
+    labels can't have special characters in key names, annotations can have
+
+    labels key have some length restrictions, annotations length can be more than labels
+
+    labels are used in kubernetes resources selectors
+
+    Annatotaions are used in selecting external resources.
 
 Annotations:
-    Annotations are attached to the pods as arbitrary non identifying objects 
-    annotations are also same like lables but labels have fixed( Minimal Length ) length but annotations cannot have fixed length in Annotations we can use links as values to download the resources but not in labels
+    Annotations are attached to the pods as arbitrary non identifying objects.
+     
+    Annotations are also same like lables but labels have fixed( Minimal Length ) length but annotations cannot have fixed length in Annotations we can use links as values to download the resources but not in labels
     Annotations can use special characters inside keys and values
 
 Resources:
@@ -213,10 +227,10 @@ Secrets --> The Storing of username and password
 Image Pull Policy:
     The imagePullPolicy for a container and the tag of the image affect when the kubelet attempts to pull (download) the specified image.
 
+Kubernetes Environment:
+    gives the environment variable
 Resources Management:
-    resources --> Like CPU,Memory,etc..
-    Requests --> CPU,Memory
-    Limits --> Memory
+    resources --> Like CPU,RAM,Memory,etc..
 
 Kubernetes Services:
     To access the pods from internet we need some kind of services that services
