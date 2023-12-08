@@ -20,7 +20,7 @@ metadata:
   name: efs-static-pvc
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   storageClassName: ""
   resources:
     requests:
