@@ -44,6 +44,15 @@ spec:
         app: nginx-pod
         tier: db
     spec:
+      volumes:  # This is Volume Creation for the pods
+        - name: nginx-logs
+          emptyDir: {}
+        - name: filebeat-logs
+          configMap:
+            name: configmap-filebeat
+            items:
+            - key: filebeat.yml
+              path: filebeat.yml
       containers:
       - name: main-container
         image: nginx
@@ -58,14 +67,5 @@ spec:
         - name: filebeat-logs
           mountPath: /usr/share/filebeat/filebeat.yml
           subPath: filebeat.yml
-      volumes:  # This is Volume Creation for the pods
-        - name: nginx-logs
-          emptyDir: {}
-        - name: filebeat-logs
-          configMap:
-            name: configmap-filebeat
-            items:
-            - key: filebeat.yml
-              path: filebeat.yml
 
       
