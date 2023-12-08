@@ -1,7 +1,7 @@
 Helm Charts:
     What ever changing constantly we need to create variables 
 Purpose of helm is 2 Things:
-    Parametetise the Kubernetes Manifest Files
+    Parameterizing the Kubernetes Manifest Files
     Packages the kubernetes Manifest Files
 
 Installing Helm : 3 Commands:
