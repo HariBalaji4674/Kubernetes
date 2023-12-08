@@ -29,15 +29,6 @@ metadata:
   name: filebeat-pod
   labels:
     environment: development
-volumes:  # This is Volume Creation for the pods
-  - name: nginx-logs
-    emptyDir: {}
-  - name: filebeat-logs
-    configMap:
-      name: configmap-filebeat
-      items:
-      - key: filebeat.yml
-        path: filebeat.yml
 spec:
   replicas: 1
   selector:
@@ -67,5 +58,14 @@ spec:
         - name: filebeat-logs
           mountPath: /usr/share/filebeat/filebeat.yml
           subPath: filebeat.yml
+      volumes:  # This is Volume Creation for the pods
+        - name: nginx-logs
+          emptyDir: {}
+        - name: filebeat-logs
+          configMap:
+            name: configmap-filebeat
+            items:
+            - key: filebeat.yml
+              path: filebeat.yml
 
       
