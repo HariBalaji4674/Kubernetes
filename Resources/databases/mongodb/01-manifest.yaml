@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Statefulset
+kind: StatefulSet
 metadata:
   name: mongodb
   labels:
@@ -8,26 +8,26 @@ metadata:
     project: roboshop
 spec:
   selector:
-      matchLables:
-          app: mongodb
-          tier: db
-          project: roboshop
+    matchLabels:
+      app: mongodb
+      tier: db
+      project: roboshop
   serviceName: "mongodb"
   replicas: 1
   template:
-      metadata:
-          name: roboshop
-          labels:
-              app: mongodb
-              tier: db
-              project: roboshop
-      spec:
-          containers:
-          - name: mongodb
-            image: joindevops/mongodb:1.0.0
-            volumeMounts:
-            - name: mongodb
-              mountPath: /data/db
+    metadata:
+      labels:
+        app: mongodb
+        tier: db
+        project: roboshop
+    spec:
+      containers:
+      - name: mongodb
+        image: joindevops/mongodb:1.0.0
+        volumeMounts:
+        - name: mongodb
+          mountPath: /data/db
+  # this is PVC directly.
   volumeClaimTemplates:
   - metadata:
       name: mongodb
@@ -40,18 +40,16 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metatada:
+metadata:
   name: mongodb
 spec:
-  ClusterIP: none
+  clusterIP: None #headless
   selector:
-    matchLabels:
-      app: mongodb
-      tier: db
-      project: roboshop
+    app: mongodb
+    tier: db
+    project: roboshop
   ports:
   - name: mongodb-port
     protocol: TCP
-    port: 27017
-    targetPort: 27017
-        
+    port: 27017 # this port belongs to service
+    targetPort: 27017 # this port belongs to container
