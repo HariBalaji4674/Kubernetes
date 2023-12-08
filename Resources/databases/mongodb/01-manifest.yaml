@@ -33,7 +33,7 @@ spec:
       name: mongodb
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "roboshop-ebs"
+      storageClassName: "roboshop-dynamic-ebs"
       resources:
         requests:
           storage: 5Gi
