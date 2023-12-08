@@ -27,4 +27,4 @@ spec:
   volumeName: myapp-common-pv
   resources:
     requests:
-      storage: 30gi
+      storage: 30Gi
