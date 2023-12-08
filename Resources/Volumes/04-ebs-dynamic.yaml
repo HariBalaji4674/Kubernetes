@@ -3,7 +3,7 @@ kind: StorageClass
 metadata:
   name: storage-class
 provisioner: ebs-cli.aws.com
-volumeBindingMode: wautForFirstConsumer
+volumeBindingMode: waitForFirstConsumer
 parameters:
   csi.storage.k8s.io/fstype: xfs
   type: io1
