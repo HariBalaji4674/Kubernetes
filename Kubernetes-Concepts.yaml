@@ -382,6 +382,11 @@ PVC --> A claim thatcan make to mount the volume
 StateFul Set and Deployment:
 Statefulset is for DB related components, StatefulSet will use Headless service
 Deployment is for Stateless applications
+    1: Stateful set follow order to create the pods
+    2: StatefulSet should have same pod name and identity
+    3: Stateful set keeps the pod identity same for th commuication
+    4: Stateful set it is mandatory to use headless service 
+HeadLess Service Means: 
 
 EBS --> Elastic Block Storage
 EFS --> Elastic File System

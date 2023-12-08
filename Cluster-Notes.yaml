@@ -20,3 +20,18 @@ Create the cluster:
 Issues While Creating EKSCTL- Cluster:
 	aws sts get-caller-identity
 	aws eks update-kubeconfig --region us-east-1 --name <Cluster-name>
+
+How to update kubeconfig in cluster:
+	aws eks update-kubeconfig --name <cluster-name> --region us-east-1
+	aws eks update-kubeconfig --name eks-spot-cluster --region us-east-1
+
+To create a fargate instances we need to create fargate profile:
+	eksctl create fargateprofile \
+	--cluster <cluster-name> \
+	--region us-east-1 \
+	-- name <name-of-fargate-profile> \
+	-- namespace <namespace-name>
+
+Kubernetes RBAC:
+What is RBAC:
+	Role Based Access Control 
