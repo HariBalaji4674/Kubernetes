@@ -31,7 +31,3 @@ If the error is in the multicontainer pod:
 	
 	kubectl logs –previous <pod_identifier> -c <container_name> -n <namespace>
 	
-Issues While Creating EKSCTL- Cluster:
-
-	aws sts get-caller-identity
-	aws eks update-kubeconfig --region us-east-1 --name eks-spot-1

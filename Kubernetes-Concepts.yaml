@@ -348,7 +348,7 @@ Storage Class: Dynamic Provisioning class where all the files should be stored
 automatically without manual intervention
 
 Flow of the Creating EBS Volumes: (Manually)
-    1:  Create EBS Volumes
+    1: Create EBS Volumes
     2: Install drivers EBS CSI
     3: Give access to worker nodes
     4: create pv 

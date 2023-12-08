@@ -21,3 +21,28 @@ spec:
   resources:
     requests:
       storage: 4Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ebs-dynamic
+  labels:
+    app: mongodb-web
+    project: roboshop
+    compoenents: db
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mongodb-web
+      project: roboshop
+      compoenents: db
+  template:
+    metadata: 
+      name: developement
+      labels:
+        app: mongodb-web
+        project: roboshop
+        compoenents: db
+    spec:
+      volumes:
