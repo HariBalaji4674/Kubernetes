@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: myapp-common-pv
+  namespace: myapp
+  labels:
+    app.kubernetes.io/name: myapp-common-pv
+    app.kubernetes.io/component: common-pv
+    app.kubernetes.io/part-of: myapp
+spec:
+  capacity:
+    storage: 30Gi
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /myapp_nfs_share
+    server: <omitted for security purposes>
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: myapp-common-pvc
+spec:
+  accessModes:
+  - ReadWriteMany
+  storageClassName: ""
+  volumeName: myapp-common-pv
+  resources:
+    requests:
+      storage: 30gi
