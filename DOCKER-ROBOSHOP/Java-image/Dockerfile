@@ -1,4 +1,4 @@
-FROM openjdk
+FROM openjre
 WORKDIR /app
 COPY . /app
 RUN javac sample.java

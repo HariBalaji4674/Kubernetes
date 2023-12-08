@@ -355,10 +355,13 @@ Flow of the Creating EBS Volumes: (Manually)
     5: Create PVC
     6: Mounted to Pod
 
+EBS: Elastic Block Storage
+EFS: Elastic Files System
+NFS: Network File System
+
 Dynamic Provisioning:
     Creation of disks/volumes can be handled by kubernetes
 StorageClass --> disks & PV --> Admin activity
- 
 
 StateFull Set :
     Statefull Set will follow orderly to create the pods/conatainers
