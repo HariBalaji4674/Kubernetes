@@ -4,7 +4,7 @@ metadata:
   name: efs-static-sc
 spec:
   capacity:
-    storage: 5Gi
+    storage: 30Gi
     volumeMode: Filesystem
     accessModes:
       - ReadWriteOnce
