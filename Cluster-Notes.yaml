@@ -13,7 +13,8 @@ Allow Security Group To access All via Internet
 
 Delete the cluster:	
 	eksctl delete cluster --region=us-east-1 --name=eks-spot-cluster
-	
+    eksctl delete cluster --config-file=eks.yaml
+    
 Create the cluster:	
 	eksctl create cluster --config-file=eks.yaml
 
@@ -31,6 +32,12 @@ To create a fargate instances we need to create fargate profile:
 	--region us-east-1 \
 	-- name <name-of-fargate-profile> \
 	-- namespace <namespace-name>
+    
+CSI Drivers:
+efs-csi:
+    kubectl kustomize "github.com/kubernetes-sigs/aws-efs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.7" > driver.yaml
+ebs-csi-driver:
+    kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.25"
 
 Kubernetes RBAC:
 What is RBAC:
