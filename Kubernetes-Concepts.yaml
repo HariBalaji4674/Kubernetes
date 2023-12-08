@@ -387,6 +387,7 @@ Deployment is for Stateless applications
     3: Stateful set keeps the pod identity same for th commuication
     4: Stateful set it is mandatory to use headless service 
 HeadLess Service Means: 
+Without accesing pod we will get same dns names
 
 EBS --> Elastic Block Storage
 EFS --> Elastic File System
