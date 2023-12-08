@@ -7,7 +7,7 @@ spec:
     storage: 30Gi
     volumeMode: Filesystem
     accessModes:
-      - ReadWriteOnce
+    - ReadWriteOnce
     storageClassName: ""
     persistentVolumeReclaimPolicy: Retain
     csi:
@@ -20,7 +20,7 @@ metadata:
   name: efs-static-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
+  - ReadWriteOnce
   storageClassName: ""
   volumeName: efs-static-sc
   resources:
