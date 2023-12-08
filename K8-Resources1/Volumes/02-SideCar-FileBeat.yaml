@@ -23,7 +23,7 @@ data:
       elasticsearch:
         hosts: ["elasticsearch:9200"]
 ---
-apiVersion: aps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: filebeat-pod
