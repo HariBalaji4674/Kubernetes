@@ -259,7 +259,7 @@ ClusterIP:
 
 NodePort:
     One Port number for all the Nodes and creates cluster ip which is connected with all three node ports
-    
+
     NodePort is the next level for ClusterIP
     In Node Port the cluster will connect with the nodes equally to each when the user hits the ip the ip will make to connect one node then that node request api call will go to the cluster ip where the port is connected
 
@@ -278,8 +278,11 @@ Sets: To deploy an application we need to make the set of pods because there is 
 
 ReplicaSet:
     Replicaset is the maintainer of the file to create pods/ run the containers inside the pod atleast one for the high availability 
+
     when we delete the pod the replica set will create the pod automatically for high availability
+
     Once Pod is created with replicaset if we change the image or configuration / volumes for the container if we build again pod it will not update anything 
+
     once the pod created with replicaset we cannot update 
 
     this is disadvantage for Replicaset --> Hence we Developed Deployment
@@ -310,14 +313,26 @@ Storage System/Services in Kubernetes:
 There are 4 Types of Storage system for container :
     1) emptyDir
     2) Hostpath
-    3) Static Provision
-    4) Dynamic Provisioning
+    3) Static Provision --> External,permanent,EBS
+    4) Dynamic Provisioning --> External, Permanent,EFS
+
+
+emptyDir --> Ephimeral,inside pod
+Hostpath--> Ephimeral ,Inside Server
 
 FileBeat: 
     FileBeat is the Lightweight Shipper for forwarding and centralizing the log data.
     Installed as Agent in Servers 
+
     Monitors for log files or locations where you specify collects the logs and events created by the applications
+
     Then it will Forward to Elastic Search or Logstash for Indexing
+
+File Beat should have some config :
+    Elastic Search Address --> Where to ship
+    It needs what are the file to ship
+we need to provide this thriugh the configuration (Configmap)
+
 
 StateFull Set :
     Statefull Set will follow orderly to create the pods/conatainers
