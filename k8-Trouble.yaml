@@ -1,7 +1,6 @@
 Kubernetes TroubleShoot and debugging Problems:
 https://www.cloudiqtech.com/how-to-debug-and-troubleshoot-common-problems-in-kubernetes-deployments/
 
-
 Imagepullback off :
 	invalid image name, Synatx name
 
@@ -32,3 +31,7 @@ If the error is in the multicontainer pod:
 	
 	kubectl logs –previous <pod_identifier> -c <container_name> -n <namespace>
 	
+Issues While Creating EKSCTL- Cluster:
+
+	aws sts get-caller-identity
+	aws eks update-kubeconfig --region us-east-1 --name eks-spot-1

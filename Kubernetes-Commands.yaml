@@ -38,20 +38,3 @@ Load Balancers : --> Types of load Balancers
   Application Load Balancers
   Proxy Network Load Balancers
   Passthrough network load balancers
-
-
-#Objects InKubernetes:
-Pod
-Service
-ReplicationController
-ReplicaSet
-DaemonSet
-Namespace
-ConfigMap 
-
-apiVersion: v1
-kind: Objects Above Listed
-metadata:
-  name: give the object name
-  
-kubectl edit service <service-name> 

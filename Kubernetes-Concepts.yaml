@@ -337,6 +337,28 @@ File Beat should have some config :
     It needs what are the file to ship
 we need to provide this thriugh the configuration (Configmap)
 
+HostPath: It is a file loader which has the access to the all the logs file in the root user
+it contains 3 types:
+    1: Daemonset
+    2: Fluentd
+    3: storage class
+Daemon Set : which should make sure that atlest one pod should be delivered to each and every nodes 
+Fluentd: shipper that all host level server anc container level log files to ELK elstic logic serach and kibana
+Storage Class: Dynamic Provisioning class where all the files should be stored
+automatically without manual intervention
+
+Flow of the Creating EBS Volumes: (Manually)
+    1:  Create EBS Volumes
+    2: Install drivers EBS CSI
+    3: Give access to worker nodes
+    4: create pv 
+    5: Create PVC
+    6: Mounted to Pod
+
+Dynamic Provisioning:
+    Creation of disks/volumes can be handled by kubernetes
+StorageClass --> disks & PV --> Admin activity
+ 
 
 StateFull Set :
     Statefull Set will follow orderly to create the pods/conatainers
