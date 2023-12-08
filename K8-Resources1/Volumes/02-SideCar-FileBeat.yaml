@@ -29,6 +29,15 @@ metadata:
   name: filebeat-pod
   labels:
     environment: development
+volumes:  # This is Volume Creation for the pods
+  - name: nginx-logs
+    emptyDir: {}
+  - name: filebeat-logs
+    configMap:
+      name: configmap-filebeat
+      items:
+      - key: filebeat.yml
+        path: filebeat.yml
 spec:
   replicas: 1
   selector:
@@ -36,15 +45,6 @@ spec:
       environment: developement
       app: nginx-pod
       tier: db
-  volumes:  # This is Volume Creation for the pods
-    - name: nginx-logs
-      emptyDir: {}
-    - name: filebeat-logs
-      configMap:
-        name: configmap-filebeat
-        items:
-        - key: filebeat.yml
-          path: filebeat.yml
   template:
     metadata:
       name: filebeat-containers
