@@ -319,7 +319,11 @@ There are 4 Types of Storage system for container :
 
 emptyDir --> Ephimeral,inside pod
 Hostpath--> Ephimeral ,Inside Server
-
+emptyDir:
+    empty directory is a kubernetes ephimeral volume used in side car patterns 
+    we will mount the volume to main container and side car containers so that they can share the storage among them 
+    When main container write the logs the side car container will access those logs and ship to ELK
+    
 FileBeat: 
     FileBeat is the Lightweight Shipper for forwarding and centralizing the log data.
     Installed as Agent in Servers 
