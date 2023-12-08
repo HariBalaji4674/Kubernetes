@@ -388,10 +388,11 @@ Deployment is for Stateless applications
     4: Stateful set it is mandatory to use headless service 
 HeadLess Service Means: 
 Without accesing pod we will get same dns names
+we need to explicity Mention Cluster ip should be none in HeadLess Service
 
 EBS --> Elastic Block Storage
 EFS --> Elastic File System
-for DB we have to use EBS beacuse the Latency will be low with EBS as ebs will be attached to next to the container as it is attached directly it will be stored directly and retrieve back immediatly as it is saved in same region
+For DB we have to use EBS beacuse the Latency will be low with EBS as ebs will be attached to next to the container as it is attached directly it will be stored directly and retrieve back immediatly as it is saved in same region
 
 Steps tp Create/Develop StatefullSet Manifest Files:
     1. Install CSI Drivers
