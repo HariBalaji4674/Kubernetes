@@ -28,3 +28,38 @@ spec:
   resources:
     requests:
       storage: 30Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+    project: roboshop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+      project: roboshop
+      environment: developement
+  template:
+    metadata:
+      name: nginx-deployment
+      labels:
+        app: nginx
+        project: roboshop
+        environment: developement
+    spec:
+      volumes:
+      - name: nginx-efs-static
+        persistentVolumeClaim:
+          claimName: efs-static-pvc
+      containers: 
+      - name: nginx-container
+        image: nginx
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: nginx-efs-static
