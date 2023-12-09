@@ -1,37 +1,20 @@
-apiVersion: v1
-kind: Deployment
-metadata:
-  name: roboshop
-  labels:
-    env: roboshop-deb
-    app: frontend
----
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  name: deployment-pod
-  labels:
-    environment: developement
-    tier: frontend
-    app: nginx
-spec:
-  replicas: 3
+metadata: #Dictionary
+  name: myapp1-deployment
+spec: # Dictionary
+  replicas: 2
   selector:
     matchLabels:
-      environment: developement1
-      tier: frontend1
-      app: nginx1
+      app: myapp1
   template:
-    metadata:
-      name: nginx-pod1
-      labels:
-        environment: developement1
-        tier: frontend1
-        app: nginx1
+    metadata: # Dictionary
+      name: myapp1-pod
+      labels: # Dictionary
+        app: myapp1  # Key value pairs
     spec:
-      containers:
-      - name: pod1
-        image: nginx
-        ports:
-        - containerPort: 80
-
+      containers: # List
+        - name: myapp1-container
+          image: ghcr.io/stacksimplify/kubenginxhelm:0.1.0
+          ports:
+            - containerPort: 80
