@@ -1,18 +1,45 @@
+Helm Concepts: Helm Commands
+Helm Install Command:
+  helm repo list
+  helm repo add REPO-NAME REPO-URL
+  helm search repo <commands>
+  helm search repo nginx
+  helm install release-name chart-name
+  helm list
+  helm unistall <release-name>
+
+Practical Installation:
+
+
+
+
+In all Kubernetes and Docker we are doing only two things Building Images and Running that Images
+
+Entire Manifest Files Are Static Except Images
+
+Building image
+Manifest --> How to Run Images --> Input Latest Version
+
+We Will Keep The important files aside and edit required Files
+
+Variables: Dry Without Interupting actual code or no hardcoding each and every place we use Variables
+
 Helm Charts:
-    What ever changing constantly we need to create variables 
+    What ever changing constantly we need to create variables
 Purpose of helm is 2 Things:
     Parameterizing the Kubernetes Manifest Files
     Packages the kubernetes Manifest Files
 
 Installing Helm : 3 Commands:
-    Installed Helm 3 
+    Installed Helm 3
 Structure of Helm:
     *1) Charts --> Where all Chart related content stored.
     *2) template--> Whee all manifest files stored
-     3) 
+     3)
+Chart.yaml: Mandatory file
 
 Charts:
-    apiVersion: Version of 
+    apiVersion: Version of
     name: Name od Charts
     version: chart version
     description: "This is helm chart of nginx"

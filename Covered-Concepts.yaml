@@ -14,13 +14,13 @@ Sets
 Storage Provisioning
 	Static Provisioning
 	Dynamic Provisioning
-	
+
 Storage Class
 Persistent Volume
 Persistent Volume Claim
 Headless Service
 
-For Databases/Statefull Sets We need to use EBS 
+For Databases/Statefull Sets We need to use EBS
 For Deployments We need to use EFS
 
 1: Install csi drivers (EFS & EBS)
@@ -33,22 +33,16 @@ For Deployments We need to use EFS
 5: Mount that Volume to Pods
 
 
-configMap:
-  envFrom:
-  - configMapRef:
-      name: name of config map
-
-
-
 Mongodb port: 27017
 Redis Port: 6379
 mysql Port: 3306
 rabbitmq Port: 5672
 
+Rbac
+IngressController
+HorizantalPodAutoScaler
 
 
 
 
 
-
-	

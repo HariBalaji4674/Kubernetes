@@ -1,5 +1,5 @@
 Akhilaannapur1803
-Kubernetes Session : 56 
+Kubernetes Session : 56
     00:00   : Docker Architecture
     08:00   : Docker Image Layers
     14:00   : Docker Cache
@@ -15,18 +15,18 @@ Kubernetes Session : 56
 Kubernetes Session : 57
     00:00   : Kubernetes Recap
     10:00   : NameSpace
-    15:00   : Pod Creation 
+    15:00   : Pod Creation
     20:00   : Multi-Pod Specification
     25:00   : Labels
     30:00   : Annotation
     36:00   : Resources Explation Limits and Requests
-    46:00   : Image pull policy 
+    46:00   : Image pull policy
     51:00   : Kubernetes Environments
     54:00   : Config-Map
     01:00:00: Config Direct Mapping
     01:13:00: Services In Kubernetes
 
-Kubernetes Session : 58 
+Kubernetes Session : 58
     03:00   : eksctl Installation
     23:00   : How NodePort Works
     35:00   : Load Balancer Notes
@@ -34,10 +34,10 @@ Kubernetes Session : 58
     42:00   : ReplicaSet
     49:00   : Deployments
     01:02:00: Roboshop K8 Building.
-    
-Kubernetes Session : 59,60 :> Total Roboshop Building 
 
-Kubernetes Session : 61: Storage Clases.      
+Kubernetes Session : 59,60 :> Total Roboshop Building
+
+Kubernetes Session : 61: Storage Clases.
     00:00  :  K8 volumes and storage
     09:00  :  emptyDir
     27:00  :  hostPath & DaemonSet & Fluentd
@@ -63,6 +63,11 @@ Kubernetes Session : 62
 Kubernetes Session : 63
     00:00 : StateFullSet MongoDB roboshop setup
     29:00 : Helm Charts
- 
 
-   
+Kubernetes Session : 64
+    00:00 : Role and Role Binding
+    20:00 : AWS-AUTH Change ConfigMap
+    
+
+
+

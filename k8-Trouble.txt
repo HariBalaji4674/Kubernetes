@@ -1,0 +1,34 @@
+Kubernetes TroubleShoot and debugging Problems:
+https://www.cloudiqtech.com/how-to-debug-and-troubleshoot-common-problems-in-kubernetes-deployments/
+
+
+Imagepullback off :
+	invalid image name, Synatx name
+
+ErrImagePull:
+	Network Error 
+RegistryUnavailable: 
+	Registry is unavailable 
+InvalidImageName:
+	Wrong Image name
+CrashLoopBackOff:
+	status indicates your pod could not be scheduled on a node for various reasons like resource constraints (insufficient CPU or memory resources), volume mounting issues.  To confirm this, run the kubectl describe command along with the pod identifier to display the details.
+	
+	Insufficeinet Resources
+	Volume Mounting
+	Using Hostport
+	
+KillContainerError:
+
+
+For everything commands:
+	kubectl describe pods <pod-name>
+	kubectl decribe pod <pod-identifier> -n <namespace>
+	kubectl logs <pod-identifier> -n <namespace>
+	
+If the error is in the multicontainer pod:
+
+	kubectl logs <pod_identifier> -c <container_name> -n <namespace>
+	
+	kubectl logs –previous <pod_identifier> -c <container_name> -n <namespace>
+	
