@@ -10,7 +10,7 @@ Helm Install Command:
 
 Practical Installation:
   helm install mybitnami https://charts.bitnami.com
-  
+  helm upgrade nginx
 
 
 
