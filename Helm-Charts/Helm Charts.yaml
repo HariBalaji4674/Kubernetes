@@ -9,7 +9,8 @@ Helm Install Command:
   helm unistall <release-name>
 
 Practical Installation:
-
+  helm install mybitnami https://charts.bitnami.com
+  
 
 
 
