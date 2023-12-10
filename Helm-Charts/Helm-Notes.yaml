@@ -1,3 +1,10 @@
+Helm Documents: https://helm.sh/docs/
+Before Helm:
+    
+Why Use of Helm:
+
+
+
 Helm Concepts: Helm Commands
 Helm Install Command:
   helm repo list
@@ -11,8 +18,6 @@ Helm Install Command:
 Practical Installation:
   helm install mybitnami https://charts.bitnami.com
   helm upgrade nginx
-
-
 
 In all Kubernetes and Docker we are doing only two things Building Images and Running that Images
 
@@ -67,3 +72,9 @@ elastic search and prometheus :
   2: You should know how to create and run the manifest files
 
 Helm Public Charts: Artifactory Hub
+
+to get the config contexts: kubectl config get-contexts
+to set the config contexts : kubectl config use-context docker-desktop
+
+Helm Commands:
+
