@@ -1,0 +1,17 @@
+apiversion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: dev
+  labels:
+    app: dev
+spec:
+  type: ClusterIP
+  selector:
+    matchLables:
+      app: nginx
+  ports:
+  - name: nginx-port
+    protocol: TCP
+    port: 80
+    targetPort: 80

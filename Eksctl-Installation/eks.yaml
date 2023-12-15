@@ -15,3 +15,6 @@ managedNodeGroups: # this is also completely managed by AWS
     desiredCapacity: 3
     ssh:
       publicKeyName: devops # replace this with your keypair exists in AWS.
+
+auth:
+  rootPassword: "test1234"
