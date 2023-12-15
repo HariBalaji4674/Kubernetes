@@ -93,5 +93,22 @@ Helm Hooks:
   post-rollback
 
 Helm Security :
-  
+
+Helm Starters:
+
+helps to application specified charts
+helm create --starter spring
+
+helm env HELM_DATA_HOME: How to know where we need to create the helm starter folder
+
+terraform
+aws cli
+aws configure
+git
+mobaxterm
+
+
+
+
+
 
