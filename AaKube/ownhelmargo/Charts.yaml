@@ -1,0 +1,4 @@
+apiVersion: v2
+name: ownhelmargo
+description: my own helm argoccd project building
+type: Namespace
