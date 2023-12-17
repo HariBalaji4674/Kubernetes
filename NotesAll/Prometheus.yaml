@@ -143,5 +143,68 @@ scrape_configs:
     - targets: ["locallhost:9090"]
 --------------------------------------------------
 What are Exporters:
+- To Monitor any application from prometheus we have to add Instruementation to the prometheus
+- Client Libraries will help to make the application to monitor the applications
+- Expirter is a Software or no of libraries and server
+- Exporter helps in exporting existing metrics from 3rd party systems like Linux or Windows
+- It will transform into a same format used for Prometheus Metrics
+- It will be useful when the system is not able to connect directly with prometheus to get the metrics
+
+Node-Exporters:
+- Prometheus Exporter for hardware and OS metrics exposed by UNIX
+- Exposes Kernel-level and Machine Level metrics on Unix Systems
+- Metrics Such as CPU, Memory, Disk-Space Disk-I/O and Network Bandwidhth
+
+Prometheus Query Language:
+
+- Data-Type
+  - Instant Vector:
+    - A Set of time series containing a single sample for each time series all sharing the same timestamp
+  - Range Vector:
+    - A Set of time series conatining a range of data points over time for each time series
+  - Scalar:
+    - A simple numberic folating point of value
+  - String:
+    - A Simple String value
+
+Selectors & Matchers:
+- Expression {job="name of job"}
+Matchers:
+- Equality Matcher (=)
+- Not Equality Matcher (!=)
+- Regular Expression Matcher (=~)
+- Not Regular Expression Matcher (!~)
+
+Operators:
+- Binary Operators : two Operands to do some task
+  - Arithmatic Operators
+  - Comparision Operators
+  - LOgical Operators
+  - Ignoring and On Operators
+- Aggregation Operators:
+  - Special Mathematical Functions that are used to combine information
+  - Sum
+  - max
+  - min
+  - avg
+  - stdenv
+
+Functions:
+- Built-in Functions
+- Rate Function rate()
+- irate Function
+- Change function
+- deriv function : derivative how far that node is restarting with time intervals
+- predict_linear
+- avg_over_time
+- count_over_time
+
+Gauge Metrics:
+- a Metric that represents a single value that can arbitrary go up and down
+
+Create A Gmail App Password:
+- 
+
+
 
 

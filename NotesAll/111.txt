@@ -1,3 +1,0 @@
-deployment:
-    imageVersion: stable-perl
-    replicaCount: 3
