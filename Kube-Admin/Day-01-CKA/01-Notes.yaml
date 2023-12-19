@@ -1,0 +1,29 @@
+Certified Kuberenetes  Commands:
+- kubectl
+- json
+- tmux
+- curl and wget
+- man pages
+
+Pre-Rquisites:
+- YAML
+- Containers
+- Json Parsers
+
+Core Concepts:
+- Cluster Architecture
+  - Worker Nodes: Host Applications as Containers
+  - Master Nodes: Manages,Plan,Schedule,Monitor Nodes
+
+Docker Vs Containerd:
+
+- Container Runtime Interface
+- Open Conatiner Initiative(OCI) : How Conatiner should build how the contianer should run
+- ctr - CLI used to interact with conatinerd Environment
+- nerdctl : Another Command line Interface to interact with docker
+- crictl provides CLI for CRI Compatible Conatiner Runtimes
+
+ETCD:
+
+What is ETCD:
+- 

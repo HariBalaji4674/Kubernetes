@@ -1,6 +1,0 @@
-apiVersion: {{- .Values.apiversion.version}}
-kind: {{- .Values.kind}}
-metadata:
-  {{- range $key,$value := .Values.metadata.values}}
-    - {{$key}}: {{$value}}
-  {{- end}}

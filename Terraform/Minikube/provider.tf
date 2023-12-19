@@ -6,12 +6,12 @@ terraform {
     }
   }
   backend "s3" {
-        bucket = "roboshophari"
+        bucket = "haridevopsbucket123"
         key    = "minikube"
         region = "us-east-1"
-        dynamodb_table = "haritable"
+        dynamodb_table = "haridevops123"
   }
 }
 provider "aws" {
-    region = "us-east-1"  
+    region = "us-east-1"
 }

@@ -1,0 +1,103 @@
+Pods Yaml Structure:
+- Docker Images --> Kubernests Cluster
+
+pod is a single object of an application
+smallest deployable unit
+multi container support
+main conatiner and helper containers
+shares same network amd storage
+
+Kubectl Command:
+- kubctl run nginx
+- kubectl get pods
+
+Yaml Files for Pods:
+- Yaml Files as inputs
+- apiVersion
+- kind
+- metadata
+- spec
+
+# ##########
+
+Demo-Pod Yaml:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  conatiners:
+  - name: nginx-container
+    image: nginx
+
+
+-----------------------------------------------------------
+
+Kubernetes Controllers or Sets :
+
+1: Replications Controllers or Sets
+
+- Replications makes the kubernetes clusters to create multiple instamces of same pods in different nodes and also in same nodes
+- Provide High Availability
+- It also helps to automatically creates new conatiner sif one crashes
+- Provides High Load Balancing & Scaling
+- Multiple Pods ato creates to share the load
+- Deploy in Several Nodes also
+- selector is main difference between replication set and replication controller
+
+Labels and Selectors:
+- Labels are used to filter the multiple pods with same name and types with differnet labels
+- Those lables should connect with selectors willl makes filters easy
+
+kubectl scale --replicas=6 -f <filename>
+kubectl scale --replicas=6 <filename> <pod-name>
+kubectl create -f <filename>
+kubectl get rs
+kubectl delete
+kubectl scale
+kubectl replace
+
+Replication.yaml
+----------------
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+      type: front-end
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+      - name: nginx-image
+        image: nginx
+-----------------------------------------------------------
+
+Deployments : Advanced Version of Replicasets
+- automatically configure the updates based on the updates on any configurations aor specifications in yaml files
+- Formatting output with kubectl
+  - kubectl -o wide
+  - kubectl -o yaml
+  - kubectl -o json
+  - kubectl -o name
+Imperative Commands:
+--dry-run
+--dry-run=client
+-o yaml
+
+Provisioner@123
+

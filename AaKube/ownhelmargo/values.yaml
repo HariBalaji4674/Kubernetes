@@ -1,7 +1,0 @@
-apiversion:
-  version: v1
-kind: Namespace
-metadata:
-  values:
-    name: myown
-    

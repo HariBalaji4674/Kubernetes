@@ -241,3 +241,10 @@ Helm Commands:
 21: helm dependency update <chart-name> : update the dependency charts
 22: helm template --debug
 23: helm install --dry-run --debug
+
+Helm Upgarde with Set Option:
+- helm upgrade
+- helm history
+- helm rollback
+- helm lint --> checking the issues in values.yaml file
+

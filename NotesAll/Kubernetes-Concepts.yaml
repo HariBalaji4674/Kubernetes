@@ -87,36 +87,115 @@ Kubernetes Secrets Management:
     # How DevOps Engineers Manage 100s of Clusters?
             Kops
             Kubeadm
+Container Images:
+- A Container Image represents binary data that encapsulates an application and all its dependencies
+- Images are executable software bundles and that can run standalone and make very well define about assumptions about their run time
+- Image names
+- Default imagePullPolicy is set as #ifNotPresent
+- imagePullPolicy
+  - IfNotPresent
+  - Always
+  - Never
+-  kubelet will download and fetch the images from the registry
+- to use the same version of image replace <image:tag> with <image@digest>
+
+ImagePullPolicy:
+- set image field as image@digest == #imgae:IfnotPresent
+- set image field as image;latest ==  # image : always
+- imagefiled as latest == always
+- imagefield as nothing == ifnotPresent
+
+
+Images issues:
+- ImagePullBackOff
+  - kubele starts createing a container for a pod using the container run time
+  - conatiner are in waiting state beacuse of imgepullbackoff
+  - kubernetes could not pull the images due to severalreasons
+  - invalid image name
+  - pulling the image from private registry withput pull secrets
+  - backoff part indicates that kubernetes will try to pull the image with an ncreasing back-off delay
+  - 5 minutes (cimpiled in limit)
+
+- Serial and parallel image pulls:
+  - each pod will pull images in serial order
+  - each node can pull images in parallel order
+  - in kubelet configuration set serializeImagePulls to false to get images parallely
+
+ /etc/cfc/kubelet/kubelet-service-config
 
 Kubernetes NameSpaces:
-    Isolated Project Spaces
-    In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster.
-    Names of resources need to be unique within a namespace, but not across namespaces.
-    Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services,Pods etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc)
+- Isolated Project Spaces
+- In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster.
+- Names of resources need to be unique within a namespace, but not across namespaces.
+- Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services,Pods etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc)
 
 Kubernetes Pods:
 What are Pods:
-    A Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
+- A Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
 
-    pod is a Basically a wrapper like yaml file with all commands need to run the container
+- pod is a Basically a wrapper like yaml file with all commands need to run the container
 
-    Pod is a smallest Deployable unit which contains one or more container specifications
+- Pod is a smallest Deployable unit which contains one or more container specifications
 
-    Pod can share both network and storage with multiple containers
+- Pod can share both network and storage with multiple containers
+
+-  namspace
+- image names and conatianer specifications
+
+Pods in kubernetes uses Two main ways:
+- pods with single container
+- pods with multiple container
+
+What are init containers:
+- conatiners which will start the actual conatiners are started
+- init containers alwas run to completion
+- init container complete successfully before another one starts
+
+Pod LifeCycle:
+- Pending
+- Running
+- Succeeded
+- Failed
+- Unknown
+
+Container States:
+- Waiting
+- Running
+- Terminated
+
+Pod Conditions:
+- PodScheduled
+- PodreadyToStartContainers
+- ConatinersReady
+- Initialized
+- Ready
+
+Probes in Kubernetes: (HealthChecks in Kubernetes that pods are running smoothly )
+- readiness probe
+  - let us knoe the container is ready to serve the requests
+- livenessprobe
+  - Conatiner is working properly or not if not it will restarts it when required
+3 Types of HealthChecks:
+  - httpGet: should return a successfull http responce
+  - tcpSocket: port Connectivity should be successfull
+  - exec: executes a specofied command inside the container should return exit value as 0
+  - grpc: Performs a remote procedure call using gRPC
 
 Why is Pod Yaml Files is needed:
 
-    To bring the Declarative Capabilities for the docker commands.
-    Yaml --> Pod Deployment --> Example
-    Pod is a one or group of containers
+To bring the Declarative Capabilities for the docker commands.
+Yaml --> Pod Deployment --> Example
+Pod is a one or group of containers
+
+----------------------------------------------------
 
 Kubernetes Advantages are :
-    Pods can be used as Shared Networking
-    pods can be used as Shared Storage
-    Pods are Wrappers File
+- Pods can be used as Shared Networking
+- Pods can be used as Shared Storage
+- Pods are Wrappers File
 
 what is kubectl :
-    It is just a commamd to run or operate the containers to run or manage like docker cli
+- It is just a commamd to run or operate the containers to run or manage like docker cli
 
 Kubernetes Deployments:
 
@@ -124,9 +203,7 @@ Deployment vs Replicaset vs Pod vs Container
 
 Container --> Docker --> Light weight in nature for running the application with all application related packages and dependencies along with the minimum os usage is called Container.
 
-
-In Master/Cluster.
-------------------
+In Master/Cluster:
 
 After Successfull Minikube Installation of Check the Files are there or not
 ls -l --> kubeconfig ,kubeconfig_ip will be there

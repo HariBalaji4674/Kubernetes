@@ -71,21 +71,40 @@ Installation of Graphana:
     5: kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
     6: minikube service grafana-np --url
 iWq85TabHyxklbPV1YbFdHRrd07gpL0tRcZyKJN2
----------------------------------------------------
-Prometheus-Notes:
-   Collect Listen for events,typically with timestamp
-   Effectively Store Those events in storage
-   Should support querying feature
-   Provide a Graphical Monitoring
+--------------------------------------------------
 
-Data Model
-Stores Metrics in key-value pairs
-Storage
----------------------------------------------------
+Prometheus Course:
+- Open-Source monitoring solution & time series database
+- Was built by SoundCloud
+- Very Active Developer and user community
+- Now its as standalone open source project
+- Ideal for monitoring on premise as well as cloud workloads
+
+Prometheus-Notes:
+- Collect Listen for events,typically with timestamp
+- Effectively Store Those events in storage
+- Should support querying feature
+- Provide a Graphical Monitoring
+
+How Does Prometheus Work:
+- Prometheus collects metrics from monitored targets by scraping metrics HTTP endpoints
+
+Prometheus Concepts:
+
+- All data is stored as time-series
+- every time series is idenified by the metric name and a set of key-value pairs called labels
+
+- metric: go_memstat_alloc_bytes
+- instance=localhost:9090
+- job=prometheus
+- Data Model
+- Stores Metrics in key-value pairs
+- Storage
+--------------------------------------------------
 Basics Terminologies of Prometheus:
 
 Monotoring:
-Monitoring is a systematic process of collecting and recording the activities taking palce in a target project, programmeor service and then using that record values to chek if the targets are reaching their objectives or not
+Monitoring is a systematic process of collecting and recording the activities taking palce in a target project, programmer service and then using that record values to chek if the targets are reaching their objectives or not
 
 Alerting:
 An alert is the outcome of an alerting rule in prometheus that is actively firing
@@ -97,7 +116,7 @@ Prometheus-Server --> Alert-Manager --> Email,PagerDuty,Slack
 Alert Manager manages the alerts from Prometheus-Server aggregate them into groups,de-duplicates,applie silences,throttels,and sends out the notifications to email,pagerDuty,Slack
 
 Target:
-Obeject to scrape
+Object to scrape
 Its is a machine
 whose metrics are to be monitored
 
@@ -107,8 +126,12 @@ end point scrape
 Job :
 job is a collection of targets/instances with same purpose
 
-Sample:
-A sample is a single value at a point in timein timeseries
+Samples:
+- The Time series data also consists of the actual data called #"samples"
+- it can be a float64 value
+- millionsecond-precision timestamp
+Notation:
+<metric-name> { <label name> = <label value> }
 
 Architecture Of Prometheus: See Pic in Google
 ---------------------------------------------
@@ -203,8 +226,34 @@ Gauge Metrics:
 - a Metric that represents a single value that can arbitrary go up and down
 
 Create A Gmail App Password:
-- 
+-
+Client Libraries:
+- Adding Instumentation to Application Code
+Type of Client Libraries:
+- Metric Types
+  - Counter
+  - Counter is
 
+Logging & Monitoring:
+logging: /var/log/syslog/ --system logs
+- Data about the state or an event of an application or service
+- Often Long Form providing detail about the state change
+- top command
+- ds
+- df
+- du
+- hf
+- Usage of Memory,CPU,Networking is logging
+Metering:
+- Data about the rate of change
+- Time-series Based
+
+**Role Based Access Control is need to access the Server and its components
+
+Capturing Kubernetes Infrastruture with data
+
+Counter_Type_Metrics:
+- counter()
 
 
 
