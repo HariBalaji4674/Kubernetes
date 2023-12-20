@@ -16,14 +16,98 @@ Core Concepts:
   - Master Nodes: Manages,Plan,Schedule,Monitor Nodes
 
 Docker Vs Containerd:
-
+- v1.24 is reoved support for docker
 - Container Runtime Interface
+- containerd is a run time environement for both docker and kubernetes
+
+Conatinerd cli:
+- ctr command line interface
+- ctr images
+- ctr run
+nerdctl CLI:
+- nerdctl ps
+- nerdctl ps -a
+
 - Open Conatiner Initiative(OCI) : How Conatiner should build how the contianer should run
 - ctr - CLI used to interact with conatinerd Environment
+
+OCI Standards:
+
+- image spec
+- Runtime spec
+
+
 - nerdctl : Another Command line Interface to interact with docker
 - crictl provides CLI for CRI Compatible Conatiner Runtimes
+
 
 ETCD:
 
 What is ETCD:
-- 
+- Key Value Store
+- Download Binaries
+- Extract
+- RunETCD RUn Time
+- Default port for etcd is --- 2379
+- port 2379
+
+./etcdctl set key1 value1 : to set teh key value pair in etcd
+etcdctl get key1 : to retrieve the content from etcd for key1
+etcdctl : to get more details about the etcdctl
+
+History of ETCD:
+- v0.1 -- aug 2013
+- v0.5 -- dec 2014
+- v2.0 -- feb 2015
+- v3.1 -- jan 2017 -- api verision changes
+
+etcdctl --version : to get the version details
+to set the in environement variable etcd api version as 3 : ETCDCTL_API=3 ./etcdctl version
+export to set the environment variable :
+expose ETCDCTL_API=3 ./etcdctl version
+
+ETCD Key Value Store: Stores About info
+- Nodes
+- PODS
+- COnfigs
+- Accounts
+- Secrets
+- Roles
+- Bindings
+- Others
+
+-- advertise-client-url={{ipaddress}}:2379
+
+initial-cluster controller-0
+
+
+Kube-API Server:
+
+- primary management controller in kubernetes
+- first authenticates and authorize
+- second sent request and send to etcd server and retrieve data
+- Authenticate
+- Validate the reuest
+- Retrieve data
+- update etcd
+- scheduler
+- kubelet will create pod instructs given by api-server
+
+kube controller manager:
+- Controls all nodes managinga nd monitring all
+- watch status
+- remediate situation
+- Monitoring the status and send data to Node-Controller then it will send to Scheduler
+- Node Monitor period = 5s
+- node-monitor-grace-periods = 40s
+kube-scheduling:
+- just schedules which pod should go where
+- based on the metrics this will decide
+- Different resource requirements
+- Scheduker looks in each pod and
+- filter nodes based on the metrics
+- Then rank the nodes 
+-
+
+
+
