@@ -106,8 +106,26 @@ kube-scheduling:
 - Different resource requirements
 - Scheduker looks in each pod and
 - filter nodes based on the metrics
-- Then rank the nodes 
--
+- Then rank the nodes
+- taints and tolerations
+- node affinity
+
+kubelet :
+- Captain on the ship
+- Register node and Create POds
+
+Kube-Proxy:
+- every pod can every other pod
+- internal network solution
+- able to communicate each other
+- need to assign service to expose the service outside the world
+- That runs on each nodes on cluster and creates a service to create a ip address for each pod
+- ip table rules
+- Daemon Set : Each Pod on each Nodes to high availability
+
+Docker Images: Docker repository
+kubernetes cluster : is setup done
+
 
 
 

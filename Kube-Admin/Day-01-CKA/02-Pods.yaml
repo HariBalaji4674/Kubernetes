@@ -1,12 +1,12 @@
 Pods Yaml Structure:
 - Docker Images --> Kubernests Cluster
-
-pod is a single object of an application
-smallest deployable unit
-multi container support
-main conatiner and helper containers
-shares same network amd storage
-
+- single instance of an object
+- pod is a single object of an application
+- smallest deployable unit
+- multi container support
+- main conatiner and helper containers
+- shares same network amd storage
+-
 Kubectl Command:
 - kubctl run nginx
 - kubectl get pods
@@ -101,3 +101,155 @@ Imperative Commands:
 
 Provisioner@123
 
+-------------------------------------------------------------
+Services:
+- Enable Communication Between inside and outside of a cluster
+- Enable Services to each pod
+- Connect applications together with another
+- This will create groups
+- Service is like an object
+- Listen to pod and creates a communication between them
+- a man ouside from the cluster should need to connect with cluster without ssh to that thats where service come into picture and gives the service to each pod in the node and that makes node-port service
+- by default it will get the cluster ip where it will create the one point of communication beteen each ppods
+- to expose that to external world we need service
+- we have node port service
+-  where we can access the application with help of nodes
+- Node-Port ranges: 30000-36567
+- Services Types:
+  - ClusterIP
+  - NodePort
+  - LoadBalancer
+  - Ingresss
+
+NodePort:
+- A Port on the node Mapping to the Port on the Pod
+- This two ports can communicate each other and send the information and retrieves it
+- A Port on the Pod is TargetPort
+- A Port on the Service Map is The node port
+- NodePort is only be in an valid range
+- That Range is : 30000 - 32767
+
+ # Service-Definition File:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-port-service
+spec:
+  type: NodePort
+  ports:
+  - targetPort: 80
+    port: 80
+    nodePort: 30008
+  selector:
+    app: myapp
+    type: fornt-end
+
+
+# Pod Definition File:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: service-pod
+  labels:
+    app: myapp
+    tier: front-end
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+Kubernetes Service: CLusterIP
+- Get Service Created inside the cluster
+
+# ClusterIP Service
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: cluster-service
+spec:
+  type: ClusterIP
+  ports:
+  - targetPort: 80
+    port: 80
+  selector:
+    app: myapp
+    tier: front-end
+
+# Pod Definition yaml file:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-define
+  labels:
+    app: nginx
+    tier: front-end
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+Service : LoadBalancer
+- Balances The Load Based on the Traffic
+
+# Service-LoadBalancing:
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: myapp
+    tier: front-end
+  ports:
+  - targetPort: 80
+    port: 80
+    NodePort: 30045
+
+# Pod Spec
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-spec
+  labels:
+    app: myapp
+    tier: front-end
+spec:
+  containers:
+  - name: nginx-pod
+    image: nginx
+
+#Deployment Set
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-set
+  labels:
+    app: myapp
+    tier: front-end
+    name: deployementlabels
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+      tier: fornt-end
+      name: nginx-pod-lables
+  template:
+    metadata:
+      name: deployment-pod
+      labels:
+        app: myapp
+        tier: front-end
+        name: deploymentlabels
+    spec:
+      containers:
+      - name: nginx-conatiner
+        image: nginx
+        ports:
+        - containerPort: 80
+        
