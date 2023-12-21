@@ -1,4 +1,7 @@
 Templates Folder: Gives The Full Details about the all manifest files
+
+Set command is used to set the values for helm charts
+
 Template Deep Dive:
   - Template Actions
       -  - (Hyphen)
@@ -56,11 +59,12 @@ Loops:
     - {{. | upper | quote}}
   {{- end}}
 
-Dicktionaries:
+Dictionaries:
   key value pairs
   {{- range $key $value .Values.var.name}}
     - {{$key}} : {{$value}}
   {{- end}}
+
 Debugging The templates:
   dry-run commands
 
@@ -69,9 +73,11 @@ Helpers.tpl file:
 
 helpers.tmpl:
  defining the custom name
+ 
   {{- define "firstchart.mytemplate" -}}
   {{- .Values.myValue}}
   {{- end}}
+
  including the customname:
  name: {{- include "firstchart.labels" . | nindent 4}}
 

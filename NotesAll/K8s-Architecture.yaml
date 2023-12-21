@@ -130,10 +130,6 @@ Conatiner LifeCycle Hooks
   - kubectl decribe pod <Podname>
   - kubectl get pod events
 
-
-
-
-
   Each Container you run is repeatable
   Same Behaviour whereever you run it
   Conatiners Decouple with the underlying host infra . This makes deployment easier in different cloud or os environments

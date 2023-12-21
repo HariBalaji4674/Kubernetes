@@ -151,5 +151,41 @@ Installing Helm Charts application using ArgoCD:
 Managing Secrets in GitOps: HashiCorp Vaults
 - Secrets Management
 - Importance of Management
-  -
+
+ArgoCD-Deployment Stratagies:
+Ingress Contollers:
+- Nginx
+- HAProxy
+- Traefik
+- Linkerd
+- GKE
+
+1: Blue-Green
+2: Canary
+3: A/B
+4: Ramped
+5: Recreate
+
+Canary Deployment: Split the traffic
+
+- Version A is Serving
+- Deploy Second Version
+- Create a New Canary Ingress With traffic splitting enabled
+- Wait enough tume to confirm that version b is stable and not thorwing unexpected errors
+- delete the canary ingress a
+- point the main application ingress to send traffic to version B
+- ShutDown version A
+
+Rollout Model:
+- Replace each pod with new Version of Pod when we deploy the application
+
+Blue-Green Deployment:
+- Two different clusters in two different regions
+- if we deploy an application one in one side and application two will be deployed in another location
+- If we deploy an application one in one region the second region is getting ready to deploy the version 2 of the service
+
+
+
+
+
 

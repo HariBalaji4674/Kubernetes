@@ -166,6 +166,7 @@ scrape_configs:
     - targets: ["locallhost:9090"]
 --------------------------------------------------
 What are Exporters:
+
 - To Monitor any application from prometheus we have to add Instruementation to the prometheus
 - Client Libraries will help to make the application to monitor the applications
 - Expirter is a Software or no of libraries and server
@@ -213,8 +214,9 @@ Operators:
   - stdenv
 
 Functions:
+
 - Built-in Functions
-- Rate Function rate()
+- Rate Function -- rate()
 - irate Function
 - Change function
 - deriv function : derivative how far that node is restarting with time intervals
@@ -228,6 +230,7 @@ Gauge Metrics:
 Create A Gmail App Password:
 -
 Client Libraries:
+
 - Adding Instumentation to Application Code
 Type of Client Libraries:
 - Metric Types
@@ -235,6 +238,7 @@ Type of Client Libraries:
   - Counter is
 
 Logging & Monitoring:
+
 logging: /var/log/syslog/ --system logs
 - Data about the state or an event of an application or service
 - Often Long Form providing detail about the state change
@@ -254,6 +258,115 @@ Capturing Kubernetes Infrastruture with data
 
 Counter_Type_Metrics:
 - counter()
+
+---------------------------------------------------
+
+Prometheus :
+
+Alerting Overview 
+
+- Alerting is separted into two parts
+- Prometheus-Servers to AlertManager
+- AlertManager to Peoples/Servers via sms/emails/on-call notifications.
+
+Genric PlaceHolders :
+- boolean
+- filename
+- secret
+- string
+
+Operating System Services:
+
+- Proemetheus
+- Pushgateway
+- Alert Manager
+- Exporters
+- Client-Libraries
+- Authentication,Authorization and Encryption
+- API Security
+- Secrets
+- Denial of Service
+- Libraries
+- Build Process
+
+Prometheus Data-Model:
+
+- Stores all data in time-series
+- Streams of timestamped values belonging to the same metric name and the same set of labeled dimensions to the same metric and the smae set of labeled dimensions
+
+Metric Types:
+- Counter: Monotnically Increasing
+- Gauge: Up and Down
+- Histogram : Samples Obeservations and Counts them in Configurable Buckets
+
+Jons and Instances:
+
+- Instances : End Points where we scrape the metrics
+
+- Jobs: Collection of Instances
+
+---------------------------------------------------
+
+Prometheus-Architecture:
+
+- Prometheus Server: Collects all inofrmations
+  - TSDB : Where it connects with origin host os HardDisk/SSD To store the metrics in Time-Series DataBase
+  - Retrieval : Pull Metrics from Jobs/Instnaces/Exporters 
+  - Alert Manager: Where it can push the notifications to many services to slack/pagerduty/teams/mails etc ..
+  - PromQL Quiries: A Queires where we run and get the UP 
+  - HTTP Server: Where we can Acces the web ui for prometheues from browser
+  - PushGateway : For supporting short lived Jobs
+  - Service Discovery : Where it will be cresting the Nodes from where the Prometheus Can fetch the metrics based on utilizations
+
+
+Servers/Services in Prometheus:
+-  Prometheus Server
+- HTTP Server
+- Alert Manager
+- Node-Exporter
+- PushGateway
+- State Metrics Server
+- Grafana Server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

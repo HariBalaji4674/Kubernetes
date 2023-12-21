@@ -1,5 +1,9 @@
 Interview Questions:
---------------------:
+--------------------
+1: How to Connect GCP With AWS :
+- Using Broader Gateway and Highly Available VPN
+2: 
+
 Q1: Kubectl does not work, what's the problem and how to solve :
 - Troubleshooting teh kubectl
 - 1: Check the kubectl version : kubectl version
